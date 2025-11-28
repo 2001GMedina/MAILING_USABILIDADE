@@ -1,0 +1,141 @@
+2025-11-28 10:54:41 [INFO] - Iniciando processo de mailing_usabilidade
+2025-11-28 10:54:41 [INFO] - .env carregado (se existente).
+2025-11-28 10:54:41 [INFO] - Configurações básicas validadas com sucesso.
+2025-11-28 10:54:41 [INFO] - Lendo arquivo SQL em: sql\mailing_usabilidade.sql
+2025-11-28 10:54:41 [INFO] - Conectando ao SQL Server...
+2025-11-28 10:54:43 [INFO] - Conexão com SQL Server estabelecida.
+2025-11-28 10:54:43 [INFO] - Executando consulta mailing_usabilidade...
+2025-11-28 10:54:45 [INFO] - Conexão com SQL Server fechada.
+2025-11-28 10:54:45 [INFO] - Consulta retornou 3904 registros.
+2025-11-28 10:54:45 [INFO] - Colunas retornadas: ['TIPO', 'ID', 'DATA_INICIO_PLANO', 'DATA_NASCIMENTO', 'IDADE', 'FAIXA_ETARIA', 'NOME', 'GENERO', 'TELEFONE', 'CPF', 'EMAIL', 'CEP', 'BAIRRO', 'CIDADE', 'STATUS', 'FORMA_PAGAMENTO', 'PLANO', 'TEMPO_DE_CASA', 'DESCONTO_VALOR', 'TIPO_CONTRATO']
+2025-11-28 10:54:45 [INFO] - Autenticando no Google Sheets...
+2025-11-28 10:54:45 [INFO] - Autenticação no Google Sheets realizada com sucesso.
+2025-11-28 10:54:45 [INFO] - Limpando aba 'MAILING_USABILIDADE' na planilha...
+2025-11-28 10:54:46 [ERROR] - Erro durante a execução: 
+Traceback (most recent call last):
+  File "C:\Users\gabri\Downloads\MAILING_USABILIDADE\venv\Lib\site-packages\gspread\client.py", line 168, in open_by_key
+    spreadsheet = Spreadsheet(self.http_client, {"id": key})
+  File "C:\Users\gabri\Downloads\MAILING_USABILIDADE\venv\Lib\site-packages\gspread\spreadsheet.py", line 29, in __init__
+    metadata = self.fetch_sheet_metadata()
+  File "C:\Users\gabri\Downloads\MAILING_USABILIDADE\venv\Lib\site-packages\gspread\spreadsheet.py", line 230, in fetch_sheet_metadata
+    return self.client.fetch_sheet_metadata(self.id, params=params)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gabri\Downloads\MAILING_USABILIDADE\venv\Lib\site-packages\gspread\http_client.py", line 305, in fetch_sheet_metadata
+    r = self.request("get", url, params=params)
+  File "C:\Users\gabri\Downloads\MAILING_USABILIDADE\venv\Lib\site-packages\gspread\http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [403]: The caller does not have permission
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\gabri\Downloads\MAILING_USABILIDADE\main.py", line 126, in main
+    clear_worksheet(client, sheet_url, WORKSHEET_NAME)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gabri\Downloads\MAILING_USABILIDADE\mods\google_sheets.py", line 30, in clear_worksheet
+    spreadsheet = client.open_by_url(url)
+  File "C:\Users\gabri\Downloads\MAILING_USABILIDADE\venv\Lib\site-packages\gspread\client.py", line 189, in open_by_url
+    return self.open_by_key(extract_id_from_url(url))
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gabri\Downloads\MAILING_USABILIDADE\venv\Lib\site-packages\gspread\client.py", line 173, in open_by_key
+    raise PermissionError from ex
+PermissionError
+2025-11-28 10:56:29 [INFO] - Iniciando processo de mailing_usabilidade
+2025-11-28 10:56:29 [INFO] - .env carregado (se existente).
+2025-11-28 10:56:29 [INFO] - Configurações básicas validadas com sucesso.
+2025-11-28 10:56:29 [INFO] - Lendo arquivo SQL em: sql\mailing_usabilidade.sql
+2025-11-28 10:56:29 [INFO] - Conectando ao SQL Server...
+2025-11-28 10:56:31 [INFO] - Conexão com SQL Server estabelecida.
+2025-11-28 10:56:31 [INFO] - Executando consulta mailing_usabilidade...
+2025-11-28 10:56:33 [INFO] - Conexão com SQL Server fechada.
+2025-11-28 10:56:33 [INFO] - Consulta retornou 3904 registros.
+2025-11-28 10:56:33 [INFO] - Colunas retornadas: ['TIPO', 'ID', 'DATA_INICIO_PLANO', 'DATA_NASCIMENTO', 'IDADE', 'FAIXA_ETARIA', 'NOME', 'GENERO', 'TELEFONE', 'CPF', 'EMAIL', 'CEP', 'BAIRRO', 'CIDADE', 'STATUS', 'FORMA_PAGAMENTO', 'PLANO', 'TEMPO_DE_CASA', 'DESCONTO_VALOR', 'TIPO_CONTRATO']
+2025-11-28 10:56:33 [INFO] - Autenticando no Google Sheets...
+2025-11-28 10:56:33 [INFO] - Autenticação no Google Sheets realizada com sucesso.
+2025-11-28 10:56:33 [INFO] - Limpando aba 'MAILING_USABILIDADE' na planilha...
+2025-11-28 10:56:35 [INFO] - Aba limpa com sucesso.
+2025-11-28 10:56:35 [INFO] - Enviando dados para o Google Sheets...
+2025-11-28 10:56:37 [INFO] - Dados inseridos na planilha com sucesso!
+2025-11-28 11:07:52 [INFO] - Iniciando processo de mailing_usabilidade
+2025-11-28 11:07:52 [INFO] - .env carregado (se existente).
+2025-11-28 11:07:52 [INFO] - Configurações básicas validadas com sucesso.
+2025-11-28 11:07:52 [INFO] - Lendo arquivo SQL em: sql\mailing_usabilidade.sql
+2025-11-28 11:07:52 [INFO] - Conectando ao SQL Server...
+2025-11-28 11:07:54 [INFO] - Conexão com SQL Server estabelecida.
+2025-11-28 11:07:54 [INFO] - Executando consulta mailing_usabilidade...
+2025-11-28 11:07:56 [INFO] - Conexão com SQL Server fechada.
+2025-11-28 11:07:56 [INFO] - Consulta retornou 3910 registros.
+2025-11-28 11:07:56 [INFO] - Colunas retornadas: ['TIPO', 'ID', 'DATA_INICIO_PLANO', 'DATA_NASCIMENTO', 'IDADE', 'FAIXA_ETARIA', 'NOME', 'GENERO', 'TELEFONE', 'CPF', 'EMAIL', 'CEP', 'BAIRRO', 'CIDADE', 'STATUS', 'FORMA_PAGAMENTO', 'PLANO', 'TEMPO_DE_CASA', 'DESCONTO_VALOR', 'TIPO_CONTRATO']
+2025-11-28 11:07:56 [INFO] - Autenticando no Google Sheets...
+2025-11-28 11:07:56 [INFO] - Autenticação no Google Sheets realizada com sucesso.
+2025-11-28 11:07:56 [INFO] - Limpando aba 'MAILING_USABILIDADE' na planilha...
+2025-11-28 11:07:58 [INFO] - Aba limpa com sucesso.
+2025-11-28 11:07:58 [INFO] - Enviando dados para o Google Sheets...
+2025-11-28 11:08:01 [INFO] - Dados inseridos na planilha com sucesso!
+2025-11-28 11:18:38 [INFO] - Iniciando processo de mailing_usabilidade
+2025-11-28 11:18:38 [INFO] - .env carregado (se existente).
+2025-11-28 11:18:38 [INFO] - Configurações básicas validadas com sucesso.
+2025-11-28 11:18:38 [INFO] - Lendo arquivo SQL em: sql\mailing_usabilidade.sql
+2025-11-28 11:18:38 [INFO] - Conectando ao SQL Server...
+2025-11-28 11:18:40 [INFO] - Conexão com SQL Server estabelecida.
+2025-11-28 11:18:40 [INFO] - Executando consulta mailing_usabilidade...
+2025-11-28 11:18:42 [INFO] - Conexão com SQL Server fechada.
+2025-11-28 11:18:42 [INFO] - Consulta retornou 3923 registros.
+2025-11-28 11:18:42 [INFO] - Colunas retornadas: ['TIPO', 'ID', 'DATA_INICIO_PLANO', 'DATA_NASCIMENTO', 'IDADE', 'FAIXA_ETARIA', 'NOME', 'GENERO', 'TELEFONE', 'CPF', 'EMAIL', 'CEP', 'BAIRRO', 'CIDADE', 'STATUS', 'FORMA_PAGAMENTO', 'PLANO', 'TEMPO_DE_CASA', 'DESCONTO_VALOR', 'TIPO_CONTRATO', 'USO']
+2025-11-28 11:18:42 [INFO] - Autenticando no Google Sheets...
+2025-11-28 11:18:42 [INFO] - Autenticação no Google Sheets realizada com sucesso.
+2025-11-28 11:18:42 [INFO] - Limpando aba 'MAILING_USABILIDADE' na planilha...
+2025-11-28 11:18:44 [INFO] - Aba limpa com sucesso.
+2025-11-28 11:18:44 [INFO] - Enviando dados para o Google Sheets...
+2025-11-28 11:18:46 [INFO] - Dados inseridos na planilha com sucesso!
+2025-11-28 12:07:41 [INFO] - Iniciando processo de mailing_usabilidade
+2025-11-28 12:07:41 [INFO] - .env carregado (se existente).
+2025-11-28 12:07:41 [INFO] - Configurações básicas validadas com sucesso.
+2025-11-28 12:07:41 [INFO] - Lendo arquivo SQL em: sql\mailing_usabilidade.sql
+2025-11-28 12:07:41 [INFO] - Conectando ao SQL Server...
+2025-11-28 12:07:43 [INFO] - Conexão com SQL Server estabelecida.
+2025-11-28 12:07:43 [INFO] - Executando consulta mailing_usabilidade...
+2025-11-28 12:07:46 [INFO] - Conexão com SQL Server fechada.
+2025-11-28 12:07:46 [INFO] - Consulta retornou 3936 registros.
+2025-11-28 12:07:46 [INFO] - Colunas retornadas: ['TIPO', 'ID', 'DATA_INICIO_PLANO', 'DATA_NASCIMENTO', 'IDADE', 'FAIXA_ETARIA', 'NOME', 'GENERO', 'TELEFONE', 'CPF', 'EMAIL', 'CEP', 'BAIRRO', 'CIDADE', 'STATUS', 'FORMA_PAGAMENTO', 'PLANO', 'TEMPO_DE_CASA', 'DESCONTO_VALOR', 'TIPO_CONTRATO', 'USO']
+2025-11-28 12:07:46 [INFO] - Autenticando no Google Sheets...
+2025-11-28 12:07:46 [INFO] - Autenticação no Google Sheets realizada com sucesso.
+2025-11-28 12:07:46 [INFO] - Limpando aba 'MAILING_USABILIDADE' na planilha...
+2025-11-28 12:07:48 [INFO] - Aba limpa com sucesso.
+2025-11-28 12:07:48 [INFO] - Enviando dados para o Google Sheets...
+2025-11-28 12:07:50 [INFO] - Dados inseridos na planilha com sucesso!
+2025-11-28 12:13:34 [INFO] - Iniciando processo de mailing_usabilidade
+2025-11-28 12:13:34 [INFO] - .env carregado (se existente).
+2025-11-28 12:13:34 [INFO] - Configurações básicas validadas com sucesso.
+2025-11-28 12:13:34 [INFO] - Lendo arquivo SQL em: sql\mailing_usabilidade.sql
+2025-11-28 12:13:34 [INFO] - Conectando ao SQL Server...
+2025-11-28 12:13:36 [INFO] - Conexão com SQL Server estabelecida.
+2025-11-28 12:13:36 [INFO] - Executando consulta mailing_usabilidade...
+2025-11-28 12:13:38 [INFO] - Conexão com SQL Server fechada.
+2025-11-28 12:13:38 [INFO] - Consulta retornou 3936 registros.
+2025-11-28 12:13:38 [INFO] - Colunas retornadas: ['TIPO', 'ID', 'DATA_INICIO_PLANO', 'DATA_NASCIMENTO', 'IDADE', 'FAIXA_ETARIA', 'NOME', 'GENERO', 'TELEFONE', 'CPF', 'EMAIL', 'CEP', 'BAIRRO', 'CIDADE', 'STATUS', 'FORMA_PAGAMENTO', 'PLANO', 'TEMPO_DE_CASA', 'DESCONTO_VALOR', 'TIPO_CONTRATO', 'USO']
+2025-11-28 12:13:38 [INFO] - Autenticando no Google Sheets...
+2025-11-28 12:13:38 [INFO] - Autenticação no Google Sheets realizada com sucesso.
+2025-11-28 12:13:38 [INFO] - Limpando aba 'MAILING_USABILIDADE' na planilha...
+2025-11-28 12:13:40 [INFO] - Aba limpa com sucesso.
+2025-11-28 12:13:40 [INFO] - Enviando dados para o Google Sheets...
+2025-11-28 12:13:43 [INFO] - Dados inseridos na planilha com sucesso!
+2025-11-28 12:21:27 [INFO] - Iniciando processo de mailing_usabilidade
+2025-11-28 12:21:27 [INFO] - .env carregado (se existente).
+2025-11-28 12:21:27 [INFO] - Configurações básicas validadas com sucesso.
+2025-11-28 12:21:27 [INFO] - Lendo arquivo SQL em: sql\mailing_usabilidade.sql
+2025-11-28 12:21:27 [INFO] - Conectando ao SQL Server...
+2025-11-28 12:21:29 [INFO] - Conexão com SQL Server estabelecida.
+2025-11-28 12:21:29 [INFO] - Executando consulta mailing_usabilidade...
+2025-11-28 12:21:32 [INFO] - Conexão com SQL Server fechada.
+2025-11-28 12:21:32 [INFO] - Formatando campos de data (DATA_INICIO_PLANO, DATA_NASCIMENTO).
+2025-11-28 12:21:32 [INFO] - Formatando campo DESCONTO_VALOR para usar vírgula.
+2025-11-28 12:21:32 [INFO] - Tratando valores ausentes (NaN) nas demais colunas.
+2025-11-28 12:21:32 [INFO] - Consulta retornou 3936 registros.
+2025-11-28 12:21:32 [INFO] - Colunas retornadas: ['TIPO', 'ID', 'DATA_INICIO_PLANO', 'DATA_NASCIMENTO', 'IDADE', 'FAIXA_ETARIA', 'NOME', 'GENERO', 'TELEFONE', 'CPF', 'EMAIL', 'CEP', 'BAIRRO', 'CIDADE', 'STATUS', 'FORMA_PAGAMENTO', 'PLANO', 'TEMPO_DE_CASA', 'DESCONTO_VALOR', 'TIPO_CONTRATO', 'USO']
+2025-11-28 12:21:32 [INFO] - Autenticando no Google Sheets...
+2025-11-28 12:21:32 [INFO] - Autenticação no Google Sheets realizada com sucesso.
+2025-11-28 12:21:32 [INFO] - Limpando aba 'MAILING_USABILIDADE' na planilha...
+2025-11-28 12:21:34 [INFO] - Aba limpa com sucesso.
+2025-11-28 12:21:34 [INFO] - Enviando dados para o Google Sheets...
+2025-11-28 12:21:36 [INFO] - Dados inseridos na planilha com sucesso!

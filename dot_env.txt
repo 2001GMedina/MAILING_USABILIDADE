@@ -1,0 +1,2 @@
+URL="https://docs.google.com/spreadsheets/d/your_spreadsheet_url/edit#gid=0"
+CONN_STRING="DRIVER={ODBC Driver 18 for SQL Server};SERVER=000.000.000.00;DATABASE=database_name;UID=database_user;PWD=user_pswd*;Encrypt=no;TrustServerCertificate=yes"
