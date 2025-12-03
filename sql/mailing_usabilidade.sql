@@ -37,6 +37,7 @@ WITH BASE AS (
     WHERE
         C.STATUS_CLIENTE_ID = 3
         AND C.FORMA_PAGAMENTO_ID IN (13, 14)
+        AND C.PLANO_ID NOT IN('19', '10', '20')
         AND C.IDADE >= 18
     UNION
     ALL ----------------------------------------------------------------------
@@ -86,6 +87,7 @@ WITH BASE AS (
     WHERE
         C.STATUS_CLIENTE_ID = 3
         AND C.FORMA_PAGAMENTO_ID IN (13, 14)
+        AND C.PLANO_ID NOT IN('19', '10', '20')
         AND C.IDADE >= 18
 ),
 NORMALIZADO AS (
@@ -204,10 +206,7 @@ SELECT
     N.NOME,
     N.GENERO,
     -- Telefone já padronizado com 55
-    CASE
-        WHEN N.TELEFONE_LIMPO LIKE '55%' THEN N.TELEFONE_LIMPO
-        ELSE CONCAT('55', N.TELEFONE_LIMPO)
-    END AS TELEFONE,
+    N.TELEFONE_LIMPO TELEFONE,
     N.CPF,
     N.EMAIL,
     N.CEP_TRATADO AS CEP,
